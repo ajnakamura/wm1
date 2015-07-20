@@ -2,18 +2,18 @@
 #!/usr/bin/env ruby
 
 Dado(/^passo21$/) do
-   click_link('Smart TV LED HD 32" LG 32LF585B 3 HDMI 3 USB Wi-fi integrado') 
+   visit('http://cep.correiocontrol.com.br/01310000.json')
 end
 
-Quando(/^passo22/) do
-   page.has_text? 'Smart TV LED HD 32" LG 32LF585B 3 HDMI 3 USB Wi-fi integrado'
+Quando(/^passo22$/) do
+   page.has_text? 'Avenida Paulista' 
 end
 
 E(/^passo23$/) do
-   click_button('Adicionar ao carrinho')
+   page.has_text? 'Bela Vista'
 end
 
 Entao(/^passo24$/) do
-   page.has_text? 'tv'  
+   page.has_text? '01310000'
 end
 
